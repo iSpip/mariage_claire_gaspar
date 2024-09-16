@@ -1,0 +1,239 @@
+/* styles.css */
+
+/* Style de base */
+
+header {
+    background-color: transparent;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    padding-top: 0px;
+    font-family: 'Poppins';
+    color: rgb(65, 65, 65);
+    background-color: rgba(255, 246, 231, 1);
+    text-align: center;
+}
+
+body.home {
+    background-image: url('images/gaspclaire2.jpg'); /* Lien vers l'image de fond */
+    background-size: cover; /* L'image couvre toute la section */
+    background-position: center; /* L'image est centrée */
+    background-attachment: fixed; /* L'image reste fixe lors du scroll */
+    color: white; /* Texte en blanc pour contraster avec l'image */
+    height: 100vh; /* La section prend toute la hauteur de la fenêtre */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#infos {
+    margin-top: 150px;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color:rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.image-text {
+    display: flex;
+    align-items: center; /* Aligne l'image et le texte au centre verticalement */
+    justify-content: center; /* Centre l'image et le texte horizontalement */
+}
+
+.image-text img {
+    margin-right: 15px; /* Ajoute un espace de 10px entre l'image et le texte */
+    margin-bottom: 6px;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    position: fixed; /* Rendre la barre fixe */
+    top: 0;
+    width: 100%; /* Prendre toute la largeur de la page */
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+    text-align: center;
+}
+
+
+/* Style des liens dans la navbar */
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    padding: 14px 20px;
+}
+
+.navbar a {
+    color: rgb(8, 80, 12);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+}
+
+body.home .navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a.active {
+    /*text-decoration: underline !important;*/
+    text-decoration: none; /* Supprimer le soulignement par défaut */
+    position: relative;
+    display: inline-block;
+}
+
+.navbar a.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -2 px;
+    width: 50%; /* Largeur du soulignement */
+    height: 4px; /* Épaisseur du soulignement */
+    background-color: rgb(8, 80, 12); /* Couleur du soulignement */
+    border-radius: 2px; /* Arrondir les bords du soulignement si désiré */
+    transform: translateX(-50%); /* Centre le soulignement sous le texte */
+}
+
+body.home .navbar a.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -2 px;
+    width: 50%; /* Largeur du soulignement */
+    height: 4px; /* Épaisseur du soulignement */
+    background-color: rgb(255, 255, 255); /* Couleur du soulignement */
+    border-radius: 2px; /* Arrondir les bords du soulignement si désiré */
+    transform: translateX(-50%); /* Centre le soulignement sous le texte */
+}
+
+
+.navbar a:hover {
+    font-weight: bold;
+}
+
+
+/* Style pour les sections */
+section {
+    padding: 60px 20px;
+    height: auto; /* Pour exemple, ajustable selon le contenu */
+    margin-top: 50 px;
+}
+
+
+/* Style du texte */
+
+h1 {
+    margin-top: 280px;
+    margin-bottom: 20px; /* Ajoute un espace de 20px sous le <h2> */
+    font-size: 128px;
+    font-family: 'Sacramento';
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Ajoute un espace de 20px sous le <h2> */
+    font-size: 28px;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    margin-top: 10px;
+    margin-bottom: 10px; /* Ajoute un espace de 20px sous le <h2> */
+    font-size: 24px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+a {
+    margin-top: 5px;
+}
+
+
+.sacramento-regular {
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.text-with-dot {
+    position: relative;
+    display: inline-block;
+}
+
+.text-with-dot::before {
+    content: '·'; /* Point moyen */
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Ajuste la position horizontale */
+    transform: translateX(10px) translateY(-50%); /* Ajuste la position verticale */
+    font-size: 1.5em; /* Taille du point */
+}
+
+.grid-container {
+    display: grid; /* Active CSS Grid */
+    grid-template-columns: 1fr 1fr; /* Crée deux colonnes de taille égale */
+    gap: 20px; /* Espacement entre les colonnes */
+    padding: 10px;
+}
+
+.grid-container4 {
+    display: grid; /* Active CSS Grid */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Crée deux colonnes de taille égale */
+    gap: 10px; /* Espacement entre les colonnes */
+    padding: 10px 250px;
+}
+
+.column {
+    padding: 10px;
+    text-align: center;
+}
+
