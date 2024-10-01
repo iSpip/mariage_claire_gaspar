@@ -36,6 +36,10 @@ body.home {
     margin-top: 150px;
 }
 
+#venir {
+    margin-top: 50px;
+}
+
 footer {
     text-align: center;
     position: fixed;
@@ -45,6 +49,18 @@ footer {
     padding: 20px;
     background-color:rgba(255, 255, 255, 0.2);
     color: white;
+}
+
+.column .block {
+    margin-top: 50px; /* Ajuste cette valeur pour plus ou moins d'espace */
+}
+
+.column .block_image {
+    margin-top: 30px; /* Ajuste cette valeur pour plus ou moins d'espace */
+}
+
+.column .block_image p{
+    font-style: italic;
 }
 
 .image-text {
