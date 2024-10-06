@@ -33,11 +33,15 @@ body.home {
 }
 
 #infos {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 #venir {
-    margin-top: 50px;
+    margin-top: 10px;
+}
+
+#dormir {
+    margin-top: 10px;
 }
 
 footer {
@@ -163,7 +167,7 @@ body.home .navbar a.active::after {
 section {
     padding: 60px 20px;
     height: auto; /* Pour exemple, ajustable selon le contenu */
-    margin-top: 50 px;
+    margin-top: 10 px;
 }
 
 
