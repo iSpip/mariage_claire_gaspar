@@ -32,17 +32,31 @@ body.home {
     padding: 20px;
 }
 
+#accueil {
+    margin-top: 140px;
+    margin-bottom: 20px;
+}
+
 #infos {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 #venir {
-    margin-top: 10px;
+    margin-top: 50px;
+}
+
+#dormir_titre {
+    margin-top: 100px;
+    padding: 10px 10px;
 }
 
 #dormir {
     margin-top: 10px;
-    padding: 20px 20px
+    padding: 10px 10px
+}
+
+#listemariage {
+    margin-top: 200px;
 }
 
 footer {
@@ -166,7 +180,7 @@ body.home .navbar a.active::after {
 
 /* Style pour les sections */
 section {
-    padding: 60px 20px;
+    padding: 20px 20px;
     height: auto; /* Pour exemple, ajustable selon le contenu */
     margin-top: 10 px;
 }
@@ -175,17 +189,16 @@ section {
 /* Style du texte */
 
 h1 {
-    margin-top: 280px;
-    margin-bottom: 20px; /* Ajoute un espace de 20px sous le <h2> */
     font-size: 128px;
     font-family: 'Sacramento';
+    margin-bottom: 30px;
 }
 
 h2 {
-    margin-top: 20px;
-    margin-bottom: 20px; /* Ajoute un espace de 20px sous le <h2> */
     font-size: 28px;
     font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h3 {
@@ -194,12 +207,26 @@ h3 {
 
 h4 {
     font-size: 28px;
+    color: rgb(8, 80, 12)
 }
 
 h5 {
     margin-top: 10px;
+    margin-bottom: 0px; /* Ajoute un espace de 20px sous le <h2> */
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h6 {
+    margin-top: 10px;
     margin-bottom: 10px; /* Ajoute un espace de 20px sous le <h2> */
     font-size: 24px;
+    font-weight: 500;
+}
+
+h7 {
+    margin-bottom: 10px; /* Ajoute un espace de 20px sous le <h2> */
+    font-size: 22px;
     font-weight: normal;
 }
 
@@ -251,6 +278,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr; /* Crée deux colonnes de taille égale */
     gap: 10px; /* Espacement entre les colonnes */
     padding: 10px 250px;
+    margin-top: 30px;
 }
 
 .column {
