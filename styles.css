@@ -24,17 +24,21 @@ body.home {
     background-position: center; /* L'image est centrée */
     background-attachment: fixed; /* L'image reste fixe lors du scroll */
     color: white; /* Texte en blanc pour contraster avec l'image */
-    height: 100vh; /* La section prend toute la hauteur de la fenêtre */
+    height: 100%; /* La section prend toute la hauteur de la fenêtre */
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 0px;
 }
 
 #accueil {
     margin-top: 140px;
     margin-bottom: 20px;
+}
+
+#accueil h2 {
+    display: block;
 }
 
 #infos {
@@ -82,15 +86,32 @@ footer {
     font-style: italic;
 }
 
+img {
+    width: 80%; /* L'image prend 100% de la largeur de son conteneur */
+    height: auto; /* Conserve les proportions */
+}
+
 .image-text {
     display: flex;
     align-items: center; /* Aligne l'image et le texte au centre verticalement */
     justify-content: center; /* Centre l'image et le texte horizontalement */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .image-text img {
+    margin-left: 15px;
     margin-right: 15px; /* Ajoute un espace de 10px entre l'image et le texte */
     margin-bottom: 6px;
+    height: 35px;
+    width: auto;
+    
+}
+
+.image-text h2 {
+    margin-left: 5px;
+    margin-right: 5px; /* Ajoute un espace de 10px entre l'image et le texte */
+    
 }
 
 /* Style de la barre de navigation */
@@ -180,9 +201,9 @@ body.home .navbar a.active::after {
 
 /* Style pour les sections */
 section {
-    padding: 20px 20px;
+    padding: 10px 10px;
     height: auto; /* Pour exemple, ajustable selon le contenu */
-    margin-top: 10 px;
+    margin-top: 0 px;
 }
 
 
@@ -199,6 +220,7 @@ h2 {
     font-weight: normal;
     margin-top: 0px;
     margin-bottom: 0px;
+    display: inline;
 }
 
 h3 {
@@ -275,10 +297,16 @@ a {
 
 .grid-container4 {
     display: grid; /* Active CSS Grid */
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Crée deux colonnes de taille égale */
+    grid-template-columns: 250px 250px 250px 250px; /* Crée deux colonnes de taille égale */
     gap: 10px; /* Espacement entre les colonnes */
     padding: 10px 250px;
-    margin-top: 30px;
+    margin: 30px auto;
+    
+}
+
+.grid-container4 img {
+    height: 75px;
+    width: auto;
 }
 
 .column {
@@ -286,4 +314,147 @@ a {
     text-align: center;
 }
 
+/* Style pour le menu burger */
+.burger-menu {
+    display: none; /* Caché par défaut */
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.5em;
+}
 
+/* Pour écrans de moins de 768px */
+@media (max-width: 768px) {
+    .menu { 
+        display: block; /* Passer de horizontal à vertical sur mobile */
+    }
+    .contenu { 
+        font-size: 14px; /* Réduire la taille de police pour s’adapter à l’écran */
+    }
+
+    body.home {
+        background-image: url('images/gaspclairelight.webp'); /* Lien vers l'image de fond */
+        background-size: cover; /* L'image couvre toute la section */
+        background-position: center; /* L'image est centrée */
+        background-attachment: fixed; /* L'image reste fixe lors du scroll */
+        color: white; /* Texte en blanc pour contraster avec l'image */
+        width: 100%; /* La section prend toute la hauteur de la fenêtre */
+        margin-top: 200px;
+    }
+
+    #infos {
+        margin-top: 50px;
+    }
+
+    #venir {
+        margin-top: 0px;
+    }
+
+    #dormir_titre {
+        margin-top: 50px;
+    }
+
+    #dormir {
+        margin-top: 0px;
+    }
+
+    .image-text {
+        flex-direction: column; /* Empile les éléments dans la colonne */
+        text-align: center; /* Centre les éléments */
+    }
+
+    .image-text h2 {
+        display: block; /* Chaque h2 prend une ligne entière */
+        width: 100%; /* S'assure qu'il occupe toute la largeur */
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-bottom: 140px
+    }
+
+    h2 {
+        display: block; /* Permet le contrôle des retours à la ligne */
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+
+    h5 {
+        margin-top: 10px;
+        margin-bottom: 0px; /* Ajoute un espace de 20px sous le <h2> */
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    h7 {
+        margin-bottom: 10px; /* Ajoute un espace de 20px sous le <h2> */
+        font-size: 18px;
+        font-weight: normal;
+    }
+
+    
+
+    .burger-menu {
+        display: block; /* Affiche le burger menu sur mobile */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Change en une seule colonne */
+        padding: 10px 10px;
+    }
+
+    .grid-container4 {
+        grid-template-columns: 1fr; /* Change en une seule colonne */
+        padding: 10px 10px;
+    }
+
+    /* Utilisation d'une vue en colonne pour les éléments de navigation */
+    .navbar ul {
+        flex-direction: column;
+        display: none; /* Masqué par défaut pour activer un menu burger */
+    }
+
+    /* Style du bouton burger */
+    .navbar .burger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 1.5em;
+        background-color: rgba(255, 246, 231, 0.9)
+    }
+
+    body.home .navbar .burger-menu {
+        background-color: rgba(255, 255, 255, 0)
+    }
+
+    /* Affichage du menu burger quand activé */
+    .navbar.active ul {
+        display: flex; /* Affiche les liens quand le burger est activé */
+        background-color: rgba(255, 246, 231, 0.9)
+    }
+
+    body.home .navbar.active ul {
+        display: flex; /* Affiche les liens quand le burger est activé */
+        background-color: rgba(0, 0, 0, 0.4)
+    }
+
+    /* Réduction des marges et padding */
+    .navbar li {
+        padding: 10px;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 0.9em; /* Réduit la taille de la police */
+    }
+}

@@ -19,6 +19,7 @@
     <!-- Barre de navigation -->
     <header>
         <nav class="navbar">
+            <div class="burger-menu" onclick="toggleMenu()">☰</div> <!-- Icône menu burger -->
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="infos.html">Infos</a></li>
@@ -29,6 +30,13 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Ajout menu burger pour mobile -->
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navbar").classList.toggle("active");
+        }
+    </script>
 
     <section id="dormir_titre">
         <p>Malheureusement le camping est interdit sur le domaine.</p>

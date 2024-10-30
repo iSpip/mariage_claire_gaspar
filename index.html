@@ -16,10 +16,11 @@
     </style>
 </head>
 <body class="home">
-    
+
     <!-- Barre de navigation -->
     <header>
         <nav class="navbar">
+            <div class="burger-menu" onclick="toggleMenu()">☰</div> <!-- Icône menu burger -->
             <ul>
                 <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="infos.html">Infos</a></li>
@@ -30,6 +31,13 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Ajout menu burger pour mobile -->
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navbar").classList.toggle("active");
+        }
+    </script>
 
     <!-- Sections de la page -->
     <section id="accueil">

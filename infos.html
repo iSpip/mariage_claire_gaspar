@@ -19,6 +19,7 @@
     <!-- Barre de navigation -->
     <header>
         <nav class="navbar">
+            <div class="burger-menu" onclick="toggleMenu()">☰</div> <!-- Icône menu burger -->
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="infos.html" class="active">Infos</a></li>
@@ -30,21 +31,28 @@
         </nav>
     </header>
 
+    <!-- Ajout menu burger pour mobile -->
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navbar").classList.toggle("active");
+        }
+    </script>
+
     <!-- Sections de la page -->
     <section id="infos">
         <div class="image-text">
-            <img src="images/calendrier.png" alt="Description de l'image" height="35">
+            <img src="images/calendrier.png" class="no-resize"  height="35">
             <h2>14 <span class="central-dot">·</span> 06 <span class="central-dot">·</span> 2025</h2>
         </div>
         <div class="image-text">
             <img src="images/marker.png" alt="Description de l'image" height="75">
-            <h2>Domaine de la Barbeirasse <span class="central-dot">·</span> Céreste-en-Luberon</h2>
+            <h2>Domaine de la Barbeirasse</h2><h2><span class="central-dot">·</span></h2><h2>Céreste-en-Luberon</h2>
         </div>
            
 
         <div class="grid-container4">
             <div class="column">
-                <img src="images/rings2.png" height="75">
+                <img src="images/rings2.png" class="no-resize" height="75">
                 <h5>Cérémonie laïque</h5>
                 <h7>16h</h7>
             </div>
