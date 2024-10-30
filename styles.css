@@ -19,7 +19,7 @@ body {
 }
 
 body.home {
-    background-image: url('/images/gaspclaire2.jpg'); /* Lien vers l'image de fond */
+    background-image: url('/images/gaspclaire.JPG'); /* Lien vers l'image de fond */
     background-size: cover; /* L'image couvre toute la section */
     background-position: center; /* L'image est centrée */
     background-attachment: fixed; /* L'image reste fixe lors du scroll */
