@@ -74,6 +74,8 @@ footer {
     color: white;
 }
 
+
+
 .column .block {
     margin-top: 50px; /* Ajuste cette valeur pour plus ou moins d'espace */
 }
@@ -86,9 +88,18 @@ footer {
     font-style: italic;
 }
 
+.grid-container img {
+    width: 80%; /* L'image prend 100% de la largeur de son conteneur */
+    height: auto; /* Conserve les proportions */
+    display: block;
+    margin: auto;
+}
+
 img {
     width: 80%; /* L'image prend 100% de la largeur de son conteneur */
     height: auto; /* Conserve les proportions */
+    display: block;
+    
 }
 
 .image-text {
@@ -311,12 +322,13 @@ a {
     gap: 10px; /* Espacement entre les colonnes */
     padding: 10px 250px;
     margin: 30px auto;
-    
+    max-width: 1040px;
 }
 
 .grid-container4 img {
     height: 75px;
     width: auto;
+    margin: auto;
 }
 
 .column {
